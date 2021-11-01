@@ -1,0 +1,109 @@
+ .header{
+	position: relative;
+	padding: 15px 0;
+	border-bottom: 1px solid $color-bordercolor;
+	&__item{
+		width: 40%;
+		&:first-child{
+			width: 60%;
+		}
+	}
+	&-content{
+		position: relative;
+		height: 100%;
+	}
+	&-logo{
+		margin-right: 90px;
+		img{
+			width: 220px;
+		}
+	}
+	&-menu{
+		width: 42%;
+		padding: 0 10px;
+	}
+}
+.header-page{
+	background-color: $color-white;
+}
+.logo{
+	&:focus{
+		text-decoration: none;
+	}
+}
+.phone{
+	&.header-phone{
+		padding: 0 10px;
+	}
+	p{
+		width: -webkit-max-content;
+		width: -moz-max-content;
+		width: max-content;
+	}
+	a{
+		position: relative;
+		display: inline-block;
+		font-family: $familyRegular;
+		line-height: 1.4;
+		font-size: 19px;
+		font-weight: 500;
+		color: $color-black;
+	}
+}
+.callback{
+	.btn + .btn{
+		margin-left: 10px;
+	}
+}
+
+
+@media (max-width: 1710px){
+	.header{
+		
+	}
+}
+@media (max-width: 1600px){
+	.header{
+		&-logo{
+			margin-right: 30px;
+			img{
+				width: 180px;
+			}
+		}
+	}
+	.phone a{
+		font-size: 16px;
+	}
+}
+@media (max-width: 1440px){
+	.header{
+		&-logo{
+			img{
+				width: 160px;
+			}
+		}
+	}
+}
+@media (max-width: 1270px){
+	.header{
+		&-menu{
+			display: none;
+		}
+	}
+}
+@media (max-width: 767px){
+	.header{
+		&-logo{
+			margin-right: 15px;
+			img{
+				width: 140px;
+			}
+		}
+		&-callback {
+			display: none;
+		}
+	}
+	.phone a{
+		font-size: 14px;
+	}
+}

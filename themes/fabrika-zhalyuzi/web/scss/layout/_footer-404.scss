@@ -1,0 +1,26 @@
+.footer-404{
+    margin-top: auto;
+    color: $color-black;
+    &__content{
+    	padding: 40px 0;
+    }
+    &__info{
+        width: 50%;
+    }
+}
+
+@media (max-width: 1000px){
+	.footer-404__content{
+		padding: 15px 0;
+	}
+}
+@media (max-width: 767px){
+	.footer-404{
+		&__info{
+			width: 100%;
+		}
+		&__dc56{
+			width: 100%;
+		}
+	}
+}

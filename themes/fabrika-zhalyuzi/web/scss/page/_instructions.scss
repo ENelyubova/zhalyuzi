@@ -1,0 +1,120 @@
+.panel{
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid $color-bordercolor;
+    .panel-heading{
+        padding: 0;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border-top: 1px solid $color-bordercolor;
+        background-color: transparent;
+        a{
+            display: block;
+            position: relative;
+            padding: 45px 75px 45px 0;
+            text-transform: uppercase;
+            @include fontF($familyMedium, 30px, 400, $color-black);
+            &:after{
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 30px;
+                height: 30px;
+                background: url(../images/icon/add.svg);
+                transform: translateY(-50%) rotate(0);
+                transition: all 0.4s ease;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &:focus{
+                text-decoration: none;
+            }
+        }
+        .active{
+            &:after{
+                transform: translateY(-50%) rotate(-135deg);
+            }
+        }
+    }
+    &-body{
+        padding: 5px 0;
+        a{
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
+            padding-left: 50px;
+            color: $color-black;
+            &:before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background-image: url(../images/icon/docs.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1600px){
+    .panel .panel-heading a{
+        padding: 35px 70px 35px 0;
+        font-size: 25px;
+    }
+}
+@media (max-width: 1440px){
+    .panel .panel-heading a{
+        font-size: 20px;
+        &:after{
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+@media (max-width: 1000px){
+    .panel{
+        .panel-heading a{
+            padding: 25px 60px 25px 0;
+            font-size: 16px;
+            &:after{
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &-body{
+            a{
+                padding-left: 40px;
+                &:before{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .panel{
+        .panel-heading a{
+            padding: 20px 50px 20px 0;
+            font-size: 14px;
+        }
+        &-body{
+            a{
+                padding-left:32px;
+                &:before{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}

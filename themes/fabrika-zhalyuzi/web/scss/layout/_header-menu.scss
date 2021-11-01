@@ -1,0 +1,52 @@
+.menu{
+	/* width: 55%;*/
+	width: calc(100% - 220px);
+	height: 100%;
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		li{
+			position: relative;
+			padding: 5px 0;
+			padding-right: 20px;
+			cursor: pointer;
+			a{
+				position: relative;
+				outline: none;
+				text-decoration: none;
+				transition: .3s;
+				font-family: $familyRegular;
+				font-size: 18px;
+				font-weight: 400;
+				color: $color-black;
+				&:before{
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 0;
+					height: 2px;
+					background-color: $color-black;
+					transition: .3s;
+				}
+				&:hover{
+					&:before{
+						width: 100%;
+					}
+				}
+			}
+			&.hide-header{
+		        display: none;
+		    }
+		}
+	}
+}
+
+@media (max-width: 1600px){
+	.menu{
+		width: calc(100% - 180px);
+		ul li a{
+			font-size: 16px;
+		}
+	}
+}

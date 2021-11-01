@@ -1,0 +1,109 @@
+.contacts-item{
+    width: 50%;
+}
+.contacts-collapse{
+    &__item{
+        padding: 40px 0;
+        &:not(:last-child){
+            border-bottom: 1px solid $color-bordercolor;
+        }
+    }
+    &__label{
+        width: 50%;
+        padding-right: 50px;
+        color: $color-black;
+    }
+    &__info{
+        width: 50%;
+        font-weight: 500;
+        font-size: 30px;
+        color: $color-black;
+        a[href^=tel], a[href^=mailto]{
+            color: $color-black;
+        }
+        a[href^=mailto]{
+            border-bottom: 2px solid black;
+            &:hover{
+                border-bottom: 2px solid transparent;
+            }
+        }
+    }
+    &__phone-1{
+        margin-bottom: 10px;
+    }
+}
+.phone-item{
+    &:first-child{
+        margin-right: 70px;
+    }
+    &:last-child{
+        margin: 8px 0;
+    }
+}
+.mode-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    span{
+        &:first-child{
+            min-width: 125px;
+        }
+        + span{
+            margin-left: 15px;
+        }
+    }
+}
+
+@media (max-width: 1600px){
+    .contacts-collapse__info{
+        font-size: 24px;
+    }
+}
+@media (max-width: 1440px){
+    .contacts-collapse{
+        &__item{
+            padding: 30px 0;
+        }
+        &__info{
+            font-size: 21px;
+        }
+    }
+}
+@media (max-width: 1270px){
+    .contacts-item{
+        width: 100%;
+    }
+    .contacts-collapse__info{
+        font-size: 18px;
+    }
+    .mode-item span:first-child{
+        min-width: 80px;
+    }
+}
+@media (max-width: 1000px){
+    .contacts-collapse{
+        &__item{
+            padding: 20px 0;
+        }
+        &__info{
+            font-size: 16px;
+        }
+    }
+    .phone-item{
+        &:first-child{
+            margin-right: 35px;
+        }
+    }
+}
+@media (max-width: 540px){
+    .contacts-collapse{
+        &__label{
+            width: 100%;
+            margin-bottom: 15px;
+            padding-right: 0;
+        }
+        &__info{
+            width: 100%;
+        }
+    }
+}

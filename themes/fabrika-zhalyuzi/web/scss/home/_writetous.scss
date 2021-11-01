@@ -1,0 +1,63 @@
+.writetous{
+	&__item{
+		width: 50%;
+		a[href^="tel:"]{
+			display: block;
+			line-height: 1.4;
+			@include fontF($familyMedium, 45px, 400, #CFA15C);
+		}
+		.btn{
+			width: -webkit-max-content;
+			width: -moz-max-content;
+			width: max-content;
+			margin-top: 25px;
+		}
+		&:first-child{
+			padding-right: 30px;
+		}
+	}
+}
+
+@media (max-width: 1600px){
+	.writetous__item{
+		a[href^="tel:"]{
+			font-size: 40px;
+		}
+	}
+}
+@media (max-width: 1270px){
+	.writetous__item{
+		p{
+			br{
+				display: none;
+			}
+		}
+		a[href^="tel:"]{
+			font-size: 30px;
+		}
+	}
+}
+@media (max-width: 1000px){
+	.writetous__item{
+		a[href^="tel:"]{
+			font-size: 24px;
+		}
+	}
+}
+@media (max-width: 767px){
+	.writetous{
+		&__item{
+			background-color: $color-white;
+			width: 100%;
+			+ .writetous__item{
+				margin-top: 15px;
+			}
+			a[href^="tel:"]{
+				font-size: 22px;
+			}
+			&:first-child{
+				padding-right: 0;
+			}
+		}
+	}
+}
